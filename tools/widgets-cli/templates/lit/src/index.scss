@@ -1,0 +1,9 @@
+@import '@lenovo-it/widgets-shared/sass';
+
+$red-color: red;
+
+:host {
+  p {
+    color: $red-color;
+  }
+}

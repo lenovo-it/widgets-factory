@@ -1,0 +1,12 @@
+// Use tailwindcss specs.
+// Refers to https://tailwindcss.com/docs/screens
+@mixin break-point($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $max-width: map-get($breakpoints, $breakpoint);
+    @media screen and (min-width: $max-width) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$breakpoint}.";
+  }
+}

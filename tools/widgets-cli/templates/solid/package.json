@@ -1,0 +1,17 @@
+{
+  "name": "@lenovo-it/widgets-$NAME$",
+  "version": "0.0.1",
+  "description": "The shared package for the widgets factory.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "changelog": "conventional-changelog -p angular --commit-path . -i CHANGELOG.md -s && git add CHANGELOG.md"
+  },
+  "peerDependencies": {
+    "@types/node": "^20.11.20",
+    "conventional-changelog-cli": "^4.1.0",
+    "solid-element": "^1.8.0",
+    "solid-js": "^1.8.5",
+    "typescript": "^5.3.0"
+  }
+}

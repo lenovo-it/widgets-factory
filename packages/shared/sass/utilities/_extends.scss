@@ -1,0 +1,22 @@
+%clear-fix {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+%break-word {
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+%text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

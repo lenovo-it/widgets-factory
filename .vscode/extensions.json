@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "runem.lit-plugin",
+    "rust-lang.rust-analyzer",
+    "esbenp.prettier-vscode",
+    "oxc.oxc-vscode",
+    "svelte.svelte-vscode",
+    "ardenivanov.svelte-intellisense",
+    "vitest.explorer",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "christian-kohler.npm-intellisense",
+    "bradlc.vscode-tailwindcss"
+  ]
+}

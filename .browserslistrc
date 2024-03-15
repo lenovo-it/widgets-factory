@@ -1,0 +1,14 @@
+# Supports customElmenets.
+# See https://caniuse.com/?search=customElements
+[production]
+chrome >= 54
+edge >= 79
+firefox >= 63
+safari >= 10.1
+ios_saf >= 10.3
+
+# Try to get the best dev experience.
+[development]
+last 1 chrome version
+last 1 firefox version
+last 1 safari version

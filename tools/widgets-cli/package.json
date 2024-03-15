@@ -1,0 +1,47 @@
+{
+  "name": "@lenovo-it/widgets-cli",
+  "version": "0.0.1",
+  "description": "Widgets cli with napi-rs.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "napi": {
+    "name": "widgets-cli",
+    "triples": {}
+  },
+  "bin": {
+    "widgets": "./bin/index.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@napi-rs/cli": "^2.18.0",
+    "@types/fs-extra": "^11.0.4",
+    "fs-extra": "^11.2.0"
+  },
+  "peerDependencies": {
+    "@types/node": "^20.11.20",
+    "conventional-changelog-cli": "^4.1.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-svelte": "^3.2.2",
+    "svelte": "4.2.12",
+    "typescript": "^5.2.2",
+    "vitest": "^1.3.1"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release --pipe \"prettier -w\" && pnpm run postbuild",
+    "build:debug": "napi build --platform --pipe \"prettier -w\" && pnpm run postbuild",
+    "prepublishOnly": "napi prepublish -t npm",
+    "test": "vitest",
+    "format": "pnpm run format:node & pnpm run format:rust",
+    "format:node": "prettier --write --cache .",
+    "format:rust": "cargo fmt",
+    "universal": "napi universal",
+    "version": "napi version",
+    "postbuild": "node ./bin/post-build.js",
+    "changelog": "conventional-changelog -p angular --commit-path . -i CHANGELOG.md -s && git add CHANGELOG.md"
+  },
+  "optionalDependencies": {
+    "@lenovo-it/widgets-cli-win32-x64-msvc": "0.0.1",
+    "@lenovo-it/widgets-cli-linux-x64-gnu": "0.0.1"
+  }
+}
